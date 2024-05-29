@@ -6,9 +6,10 @@
 
 @section("body")
 
-  <form action="" method="post">
-    <label for="nameArticulo">Articulo: </label>
-    <input type="text" name="nameArticulo">
+  <form action="/producto" method="post">
+    <labewwl for="nombreArticulo">Articulo: </labewwl>
+    <input type="text" name="nombreArticulo">
+    {{csrf_field()}}
     <input type="submit" value="Enviar">
   </form>
 @endsection
