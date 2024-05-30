@@ -33,6 +33,10 @@ class productosController extends Controller
         //
         $producto = new Producto;
         $producto->nombreArticulo = $request->nombreArticulo;
+        $producto->seccion = $request->seccion;
+        $producto->precio = $request->precio;
+        $producto->fecha = $request->fecha;
+        $producto->paisDeOrigen = $request->paisDeOrigen;
         $producto->save();
     }
 

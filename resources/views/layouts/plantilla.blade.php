@@ -8,6 +8,7 @@
 <body>
   <div class="header">
     @yield("header")
+    <img src="" alt="IMAGEN_LOGO">
   </div>
   <div class="body">
     @yield("body")
