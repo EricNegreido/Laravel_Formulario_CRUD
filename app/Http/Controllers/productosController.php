@@ -46,7 +46,8 @@ class productosController extends Controller
      */
     public function show(string $id)
     {
-        //
+        $producto = Producto::findOrFail($id);;
+        return view("productos.show", compact("producto"));
     }
 
     /**
@@ -54,7 +55,8 @@ class productosController extends Controller
      */
     public function edit(string $id)
     {
-        //
+        $producto = Producto::findOrFail($id);;
+        return view("productos.edit", compact("producto"));
     }
 
     /**
