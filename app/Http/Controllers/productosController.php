@@ -39,6 +39,8 @@ class productosController extends Controller
         $producto->fecha = $request->fecha;
         $producto->paisDeOrigen = $request->paisDeOrigen;
         $producto->save();
+        return redirect("/producto");
+
     }
 
     /**
@@ -64,8 +66,9 @@ class productosController extends Controller
      */
     public function update(Request $request, string $id)
     {
-        //
-        return view("productos.update");
+        $producto = Producto::findOrFail($id);
+        $producto->update($request->all());
+        return redirect("/producto");
 
     }
 
@@ -74,8 +77,9 @@ class productosController extends Controller
      */
     public function destroy(string $id)
     {
-        //
-        return view("productos.delete");
+        $producto = Producto::findOrFail($id);
+        $producto->delete();
+        return redirect("/producto");
 
     }
 }

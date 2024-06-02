@@ -19,6 +19,5 @@
     <input type="text" name="paisDeOrigen">
     <input type="submit" value="Enviar">
     {{csrf_field()}}
-    <input type="submit" value="Enviar">
   </form>
 @endsection
