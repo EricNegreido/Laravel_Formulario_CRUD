@@ -7,7 +7,7 @@
 @section("body")
 
   <form action="/producto" method="post">
-    <labewwl for="nombreArticulo">Articulo: </labewwl>
+    <label for="nombreArticulo">Articulo: </label>
     <input type="text" name="nombreArticulo">
     <label for="seccion">Seccion: </label>
     <input type="text" name="seccion">
@@ -20,4 +20,11 @@
     <input type="submit" value="Enviar">
     {{csrf_field()}}
   </form>
+  @if (count($errors)>0)
+      @foreach ( $errors->all() as $err )
+        {{$err}}
+      @endforeach
+      
+    
+    @endif
 @endsection
